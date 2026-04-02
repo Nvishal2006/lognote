@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-vox"
+version = "0.1.0"
+description = "A Black Box Flight Recorder for Python applications."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Vishal N" },
+  { email = "nvishal3032006@gmail.com" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"LinkedIn" = "https://www.linkedin.com/in/vishal-n2006/"
+"GitHub" = "https://github.com/Nvishal2006"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,15 @@
+# Python 
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Environments
+.venv/
+env/
+venv/
+
+# Project Specific
+.py_vox_logs/

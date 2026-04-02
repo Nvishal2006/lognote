@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/py_vox/__init__.py
+src/py_vox/core.py
+src/py_vox.egg-info/PKG-INFO
+src/py_vox.egg-info/SOURCES.txt
+src/py_vox.egg-info/dependency_links.txt
+src/py_vox.egg-info/top_level.txt
+tests/test_vox.py

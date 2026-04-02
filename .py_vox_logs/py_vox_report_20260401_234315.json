@@ -1,0 +1,42 @@
+[
+  {
+    "type": "block_monitor",
+    "name": "Startup",
+    "timestamp": "2026-04-01T23:43:15.140704",
+    "status": "success",
+    "duration_seconds": 0.050959199998033
+  },
+  {
+    "type": "function_call",
+    "function": "test_function",
+    "module": "__main__",
+    "timestamp": "2026-04-01T23:43:15.191513",
+    "inputs": {
+      "my_secret_token": "[REDACTED]",
+      "user_id": "u456"
+    },
+    "status": "success",
+    "return_value": {
+      "status": "success",
+      "user_id": "u456"
+    },
+    "duration_seconds": 0.10077929999897606
+  },
+  {
+    "type": "function_call",
+    "function": "test_error",
+    "module": "__main__",
+    "timestamp": "2026-04-01T23:43:15.294956",
+    "inputs": {
+      "password": "[REDACTED]"
+    },
+    "status": "error",
+    "exception": "division by zero",
+    "duration_seconds": 0.00010490000204299577,
+    "local_vars_at_crash": {
+      "password": "[REDACTED]",
+      "x": 10,
+      "y": 0
+    }
+  }
+]
