@@ -1,11 +1,11 @@
-# py-vox - Black Box Flight Recorder
+# log-box - Black Box Flight Recorder
 
-`py-vox` is a high-performance, threading-safe, zero-dependency "Black Box Flight Recorder" for Python applications. Designed specifically for production environments, it captures essential execution paths, performance metrics, and state-at-crash information without slowing down your host application.
+`log-box` is a high-performance, threading-safe, zero-dependency "Black Box Flight Recorder" for Python applications. Designed specifically for production environments, it captures essential execution paths, performance metrics, and state-at-crash information without slowing down your host application.
 
-## Why py-vox?
+## Why log-box?
 When a critical application crashes in production, having an exact playback of what happened is invaluable. However, tracing tools usually require external setups and carry a heavy performance hit or many dependencies.
-`py-vox` runs entirely in the Python Standard Library, logging safely inside a lightweight memory buffer (limited to the last 100 events). It strictly monitors for performance bottlenecks and captures local frame variables right before a stack unrolls in severe crashes, meaning no more flying blind. 
-Plus, `py-vox` comes with an automatic Privacy Filter, ensuring passwords, tokens, and secret keys never leak into your logs.
+`log-box` runs entirely in the Python Standard Library, logging safely inside a lightweight memory buffer (limited to the last 100 events). It strictly monitors for performance bottlenecks and captures local frame variables right before a stack unrolls in severe crashes, meaning no more flying blind. 
+Plus, `log-box` comes with an automatic Privacy Filter, ensuring passwords, tokens, and secret keys never leak into your logs.
 
 ## Quick Start
 
@@ -17,7 +17,7 @@ pip install .
 
 ### Usage
 ```python
-from py_vox import trace, monitor, report
+from log_box import trace, monitor, report
 
 # 1. Trace function calls and return values
 @trace
@@ -41,7 +41,7 @@ heavy_computation()
 def faulty_function(my_password: str):
     x = 10
     y = 0
-    # On crash, py-vox captures x=10, y=0, and my_password="[REDACTED]"
+    # On crash, log-box captures x=10, y=0, and my_password="[REDACTED]"
     return x / y
 
 try:
@@ -50,7 +50,7 @@ except ZeroDivisionError:
     pass
 
 # 4. Export the session locally
-# Generates a JSON (or Markdown) report in the .py_vox_logs directory
+# Generates a JSON (or Markdown) report in the .log_box_logs directory
 report_path = report(format="json")
 print(f"Log saved to {report_path}")
 ```
