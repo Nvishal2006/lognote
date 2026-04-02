@@ -1,5 +1,5 @@
 import pytest
-from log_box.core import trace  # Ensure this matches your actual decorator name
+from lognote.core import trace  # Ensure this matches your actual decorator name
 
 # Test 1: Testing a normal successful function
 def test_function_capture():

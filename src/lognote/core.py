@@ -42,7 +42,7 @@ def format_json(events: list[Dict[str, Any]]) -> str:
     return json.dumps(processed_events, indent=2)
 
 def format_markdown(events: list[Dict[str, Any]]) -> str:
-    lines = ["# log-box Session Log\n"]
+    lines = ["# lognote Session Log\n"]
     for event in events:
         lines.append(f"## Event: {event.get('type', 'Unknown')} at {event.get('timestamp', 'Unknown')}")
         for k, v in event.items():
@@ -161,7 +161,7 @@ def monitor(name: str):
         session.add_event(event)
         raise
 
-def report(format: Literal['json', 'markdown'] = 'json', output_dir: str = '.log_box_logs') -> str:
+def report(format: Literal['json', 'markdown'] = 'json', output_dir: str = '.lognote_logs') -> str:
     """Export the current session buffer into a clean, human-readable file."""
     events = session.get_events()
     dir_path = Path(output_dir)
@@ -171,10 +171,10 @@ def report(format: Literal['json', 'markdown'] = 'json', output_dir: str = '.log
     
     if format == 'markdown':
         content = format_markdown(events)
-        file_path = dir_path / f"log_box_report_{timestamp}.md"
+        file_path = dir_path / f"lognote_report_{timestamp}.md"
     else:
         content = format_json(events)
-        file_path = dir_path / f"log_box_report_{timestamp}.json"
+        file_path = dir_path / f"lognote_report_{timestamp}.json"
         
     file_path.write_text(content, encoding='utf-8')
     return str(file_path)
