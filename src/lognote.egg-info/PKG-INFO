@@ -1,3 +1,20 @@
+Metadata-Version: 2.4
+Name: lognote
+Version: 0.2.0
+Summary: A Black Box Flight Recorder for Python applications.
+Author: Vishal N
+Author-email: nvishal3032006@gmail.com
+Project-URL: Homepage, https://github.com/Nvishal2006/lognote.git
+Project-URL: LinkedIn, https://www.linkedin.com/in/vishal-n2006/
+Project-URL: GitHub, https://github.com/Nvishal2006
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
 <div align="center">
 
 <!-- Banner -->

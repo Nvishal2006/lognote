@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/lognote/__init__.py
+src/lognote/__main__.py
+src/lognote/cli.py
+src/lognote/core.py
+src/lognote.egg-info/PKG-INFO
+src/lognote.egg-info/SOURCES.txt
+src/lognote.egg-info/dependency_links.txt
+src/lognote.egg-info/top_level.txt
+tests/test_lognote.py
