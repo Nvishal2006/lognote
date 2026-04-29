@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=lognote&fontSize=80&fontColor=ffffff&fontAlignY=38&desc=The%20AI-Powered%20Flight%20Recorder%20for%20Python&descAlignY=58&descSize=20&descColor=a78bfa" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=lognote&fontSize=80&fontColor=ffffff&fontAlignY=30&desc=The%20AI-Powered%20Flight%20Recorder%20for%20Python&descAlignY=58&descSize=20&descColor=a78bfa" width="100%"/>
 
 <!-- Badges Row 1 -->
 <p>
@@ -39,7 +39,7 @@ In a world where logs are often **too thin** and debuggers are **too heavy**, lo
 ┌─────────────────────────────────────────────────────────┐
 │                    YOUR APPLICATION                     │
 │                                                         │
-│   main() → service() → db_query() → 💥 CRASH           │
+│   main() → service() → db_query() → 💥 CRASH            |
 │      ↑           ↑          ↑                           │
 │      └───────────┴──────────┘                           │
 │           lognote records EVERYTHING                    │
@@ -70,27 +70,27 @@ In a world where logs are often **too thin** and debuggers are **too heavy**, lo
 ║                    lognote Flight Recorder                       ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║   Your Code          sys.settrace Engine                        ║
-║   ──────────  ──►   ─────────────────────                       ║
+║   Your Code          sys.settrace Engine                         ║ 
+║   ──────────  ──►   ─────────────────────                        ║
 ║   main()             IGNITE: Hook into your project scope        ║
 ║   service()          FILTER: Skip stdlib & site-packages         ║
 ║   db_query()         CAPTURE: locals(), args, return values      ║
 ║                             │                                    ║
 ║                             ▼                                    ║
-║                     ┌───────────────┐                           ║
-║                     │  Async Queue  │  ← Non-blocking buffer    ║
-║                     └───────┬───────┘                           ║
+║                     ┌───────────────┐                            ║
+║                     │  Async Queue  │  ← Non-blocking buffer     ║
+║                     └───────┬───────┘                            ║
 ║                             │                                    ║
 ║                             ▼                                    ║
-║                     ┌───────────────┐                           ║
-║                     │ PII Scrubber  │  ← Redacts secrets        ║
-║                     └───────┬───────┘                           ║
+║                     ┌───────────────┐                            ║
+║                     │ PII Scrubber  │  ← Redacts secrets         ║
+║                     └───────┬───────┘                            ║
 ║                             │                                    ║
 ║                             ▼                                    ║
-║                     ┌───────────────┐                           ║
-║                     │  JSON Flight  │  ← Structured record      ║
+║                     ┌───────────────┐                            ║
+║                     │  JSON Flight  │  ← Structured record       ║
 ║                     │    Record     │                            ║
-║                     └───────────────┘                           ║
+║                     └───────────────┘                            ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -150,9 +150,9 @@ You'll get a beautiful terminal dashboard like this:
 ║  14:22:01.003  →  fetch_user()   [ENTER]  token=***      ║
 ║  14:22:01.045  →  db_query()     [ENTER]  sql="SELECT…"  ║
 ║  14:22:01.099  →  db_query()     [EXIT]   result=None    ║
-║  14:22:01.100  →  process()      [ERROR]  💥 CRASH       ║
+║  14:22:01.100  →  process()      [ERROR]  💥 CRASH      ║
 ║                                                          ║
-║  🤖 AI Diagnosis                                         ║
+║  🤖 AI Diagnosis                                        ║
 ║  ─────────────────────────────────────────────────────── ║
 ║  db_query() returned None because the connection pool    ║
 ║  was exhausted. process() tried to call .rows on None.   ║
